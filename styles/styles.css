@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#4C9BF6), color-stop(50%, #5F55EB), to(#B44CF6));
+  background-image: linear-gradient(to bottom right, #4C9BF6 0%, #5F55EB 50%, #B44CF6 100%);
+  color: #fff;
+  min-height: 100vh;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+form input,
+form button {
+  padding: 10px;
+  font-size: 2rem;
+  border: 0;
+  background: #fff;
+}
+
+form button {
+  color: #7342D4;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #7342D4;
+  color: #fff;
+}
+
+.todo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-container .todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo-container .todo-list .todo {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.todo {
+  margin: 0 5rem;
+  background: #fff;
+  font-size: 1.5rem;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.todo li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.filter-todo {
+  padding: 1rem;
+  width: 100%;
+}
+
+.trash-btn,
+.complete-btn {
+  background: #ff6f47;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background: #0bd4a2;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.fall {
+  -webkit-transform: translateY(15rem) rotateZ(20deg);
+          transform: translateY(15rem) rotateZ(20deg);
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+/*CUSTOM SELECTOR */
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+  font-size: 1.5rem;
+}
+
+/* Custom Select */
+.select {
+  margin: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  width: 20%;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: #7342D4;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+@media (max-width: 699px) {
+  header, form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: hidden;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  form input, form button {
+    font-size: 1.2rem;
+  }
+  .todo-container .todo-list {
+    min-width: 100%;
+    list-style: none;
+  }
+  form button {
+    margin-top: -42px;
+    margin-right: -75%;
+  }
+  input {
+    width: 80%;
+  }
+  .select {
+    width: 40%;
+    margin: 1.2rem;
+  }
+  .select::after {
+    padding: 0.8rem;
+  }
+  select {
+    font-size: 1.2rem;
+  }
+  .filter-todo {
+    padding: 0.6rem;
+  }
+  .fall {
+    -webkit-transform: translateX(40rem);
+            transform: translateX(40rem);
+    opacity: 0;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+}
+
+@media (min-width: 700px) {
+  .todo-container .todo-list {
+    min-width: 75%;
+    list-style: none;
+  }
+  input {
+    width: 40%;
+  }
+}
+
+@media (min-width: 900px) {
+  .todo-container .todo-list {
+    min-width: 70%;
+    list-style: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .todo-container .todo-list {
+    min-width: 65%;
+    list-style: none;
+  }
+}
+
+/*@media (min-width: 1400px){
+}*/
+/*# sourceMappingURL=styles.css.map */
